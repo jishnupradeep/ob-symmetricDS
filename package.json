@@ -6,10 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "prepublish": "npm run build",
-    "coverage": "babel-node ./node_modules/.bin/babel-istanbul cover _mocha && babel-istanbul check-coverage",
-    "build": "rimraf lib dist && npm run lint && babel src --out-dir=lib && webpack && webpack -p",
-    "test": "mocha --compilers js:babel-core/register",
-    "lint": "eslint *.babel.js src test"
+    "build": "webpack && webpack -p"
   },
   "repository": {
     "type": "git",
